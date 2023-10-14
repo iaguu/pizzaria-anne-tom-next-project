@@ -1,0 +1,23 @@
+import dynamic from 'next/dynamic'
+
+export * from 'components/ErrorBoundary'
+export * from 'components/Footer'
+export * from 'components/Header'
+export * from 'components/HeadPage'
+export * from 'components/TitleSection'
+export * from 'components/BtnNext'
+export * from 'components/Additional'
+export * from 'components/Cart'
+export * from 'components/Steps'
+export * from 'components/Flavor'
+export * from 'components/Size'
+export * from 'components/Toast'
+export * from 'components/Forms/FormData'
+export * from 'components/Forms/Input'
+export * from 'components/Forms/Select'
+export * from 'components/Banner'
+export * from 'components/PopupInstallPwa'
+export * from 'components/CookieWarning'
+export * from 'components/ContainerCardControlRender'
+
+export const CardsSquare = dynamic(() => import('components/CardsSquare'))

@@ -1,0 +1,38 @@
+[
+  {
+    "additionals": [
+      {
+        "id": "bacon",
+        "name": "Bacon",
+        "price": 8.50,
+        "qtd": 0,
+        "qtdMax": 10,
+        "img": "adBacon"
+      },
+      {
+        "id": "calabreza",
+        "name": "Calabreza",
+        "price": 4.99,
+        "qtd": 0,
+        "qtdMax": 10,
+        "img": "adCalabreza"
+      },
+      {
+        "id": "mussarela",
+        "name": "Mussarela",
+        "price": 6.79,
+        "qtd": 0,
+        "qtdMax": 10,
+        "img": "adMussarela"
+      },
+      {
+        "id": "palmito",
+        "name": "Palmito",
+        "price": 5.44,
+        "qtd": 0,
+        "qtdMax": 10,
+        "img": "adPalmito"
+      }
+    ]
+  }
+]

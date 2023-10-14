@@ -1,0 +1,60 @@
+[
+  {
+    "pizzas": [
+      {
+        "id": "calabreza",
+        "name": "Calabreza",
+        "img": "calabreza",
+        "ingredients": "Mussarela, calabresa e cebola, orégano.",
+        "recommendationDay": true,
+        "points": 300
+      },
+      {
+        "id": "mussarela",
+        "name": "Mussarela",
+        "img": "mussarela",
+        "ingredients": "Queijo mussarela e orégano.",
+        "recommendationDay": false,
+        "points": 360
+      },
+      {
+        "id": "napolitana",
+        "name": "Napolitana",
+        "img": "napolitana",
+        "ingredients": "Mussarela, tomate, orégano e parmesão ralado.",
+        "recommendationDay": false,
+        "points": 250
+      },
+      {
+        "id": "peperone",
+        "name": "peperone",
+        "img": "peperone",
+        "ingredients": "Mussarela, orégano e pepperoni.",
+        "recommendationDay": false,
+        "points": 400
+      }
+    ],
+    "sizesAndPrices": [
+      {
+        "size": "Pequena",
+        "price": 19.99,
+        "slices": 4
+      },
+      {
+        "size": "Média",
+        "price": 29.99,
+        "slices": 6
+      },
+      {
+        "size": "Grande",
+        "price": 39.99,
+        "slices": 8
+      },
+      {
+        "size": "Família",
+        "price": 49.99,
+        "slices": 12
+      }
+    ]
+  }
+]

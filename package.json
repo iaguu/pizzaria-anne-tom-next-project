@@ -1,0 +1,49 @@
+{
+  "name": "pizzaria_toffanetto",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "next:lint": "next lint"
+  },
+  "dependencies": {
+    "@styled-icons/bootstrap": "^10.29.0",
+    "@unform/core": "^2.1.6",
+    "@unform/web": "^2.1.6",
+    "axios": "^0.21.1",
+    "js-cookie": "^2.2.1",
+    "next": "^12.0.0",
+    "next-pwa": "^5.2.14",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-input-mask": "^3.0.0-alpha.2",
+    "react-toastify": "^7.0.3",
+    "sharp": "^0.32.6",
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^2.2.6",
+    "@types/node": "^15.12.2",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^17.0.33",
+    "@types/react-input-mask": "^3.0.1",
+    "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-next": "^11.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "typescript": "^4.2.3"
+  }
+}
