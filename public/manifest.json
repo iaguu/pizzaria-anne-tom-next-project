@@ -1,6 +1,6 @@
 {
-  "name": "Pizzaria Toffanetto",
-  "short_name": "Pizzaria Toffanetto",
+  "name": "Pizzaria Anne & Tom",
+  "short_name": "Pizzaria Anne & Tom",
   "theme_color": "#7f1d1d",
   "background_color": "#7f1d1d",
   "display": "fullscreen",
@@ -76,5 +76,5 @@
       "type": "image/png"
     }
   ],
-  "description": "Projeto Pizzaria Toffanetto"
+  "description": "Pizza Anne & Tom"
 }

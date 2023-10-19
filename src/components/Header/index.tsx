@@ -13,8 +13,8 @@ export const Header = () => {
                   <img
                     src="https://annetom.com/img/logo-x.png"
                     alt="Pizzaria Anne & Tom"
-                    width="240"
-                    height="50"
+                    width="245"
+                    height="48"
                   />
                 </S.Logo>
               </a>

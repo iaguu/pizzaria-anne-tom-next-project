@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
             name="description"
-            content="Este projeto tem o objetivo de agilizar o processo do pedido de pizzas, proporcionando uma experiência melhor para o cliente."
+            content="Anne & Tom: Pizza Premium, Servida com Paixão."
           />
           <meta
             name="keywords"
@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           <meta name="copyright" content="© Éverton Toffanetto" />
           <link
             rel="canonical"
-            href="https://pizzaria-toffanetto.querocriarsite.com"
+            href="https://annetom.com"
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -43,30 +43,30 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#7f1d1d" />
           <link rel="manifest" href="/manifest.json" />
           {/* open graph */}
-          <meta property="og:site_name" content="Pizzaria Toffanetto" />
+          <meta property="og:site_name" content="Pizzaria Anne & Tom" />
           <meta property="og:locale" content="pt_BR" />
           <meta
             property="og:url"
-            content="https://pizzaria-toffanetto.querocriarsite.com"
+            content="https://annetom.com"
           />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Pizzaria Toffanetto" />
           <meta
             property="og:description"
-            content="Este projeto tem o objetivo de agilizar o processo do pedido de pizzas, proporcionando uma experiência melhor para o cliente."
+            content="Anne & Tom: Pizza Premium, Servida com Paixão."
           />
           <meta
             property="og:image"
-            content="https://pizzaria-toffanetto.querocriarsite.com/img/logo-og.jpg"
+            content="https://annetom.com/img/logo-og.jpg"
           />
           <meta
             property="og:image:secure_url"
-            content="https://pizzaria-toffanetto.querocriarsite.com/img/logo-og.jpg"
+            content="https://annetom.com/img/logo-og.jpg"
           />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="512" />
           <meta property="og:image:height" content="512" />
-          <meta property="og:image:alt" content="Pizzaria Toffanetto" />
+          <meta property="og:image:alt" content="Pizzaria Anne & Tom" />
         </Head>
         <body>
           <Main />

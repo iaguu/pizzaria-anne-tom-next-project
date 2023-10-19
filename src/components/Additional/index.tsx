@@ -2,7 +2,6 @@ import { useContext, useEffect } from 'react'
 import * as S from 'components/Additional/styles'
 import { DataContext } from 'hooks/UseContext'
 import { useCart } from 'hooks/UseCart'
-import Image from 'next/image'
 import { getStorage, setStorage } from 'utils/HandleSessionStorage'
 
 interface AdditionalProps {
@@ -19,7 +18,7 @@ interface AdditionalProps {
 }
 
 export const Additional = ({ data }: AdditionalProps) => {
-  const { hasNetwork, cart, setCart, additionals, setAdditionals } =
+  const { cart, setCart, additionals, setAdditionals } =
     useContext(DataContext)
 
   // popula o estado com o objeto additionals da api
@@ -65,21 +64,12 @@ export const Additional = ({ data }: AdditionalProps) => {
             <S.ContainerAdditional>
               <S.Box>
                 <S.BoxImg>
-                  {hasNetwork ? (
-                    <Image
-                      src={`/api-img/additionals/${el.img}.jpg`}
-                      alt={el.name}
-                      layout="fill"
-                      objectFit="cover"
-                      quality={90}
-                      priority={true}
-                    />
-                  ) : (
+
                     <img
-                      src={`/api-img/additionals/${el.img}.jpg`}
+                      src={`https://annetom.com/api-img/additionals/${el.img}.jpg`}
                       alt={el.name}
                     />
-                  )}
+                  
                 </S.BoxImg>
 
                 <S.ContainerInfo>

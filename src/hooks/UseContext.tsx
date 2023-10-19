@@ -23,17 +23,17 @@ interface FormDataProvider {
 interface AdditionalProps {
   id: string
   name: string
-  price: number
   qtd: number
-  qtdMax: number
+  qtdMax: number,
+  price: number,
   img: string
 }
 
 interface ChallengeContextData {
   cart: number
   setCart: Dispatch<React.SetStateAction<number>>
-  size: { price: number; size: string }
-  setSize: Dispatch<React.SetStateAction<{ price: number; size: string }>>
+  size: { size: string }
+  setSize: Dispatch<React.SetStateAction<{ size: string }>>
   formData: FormDataProvider
   setFormData: Dispatch<React.SetStateAction<FormDataProvider>>
   additionals: AdditionalProps[]
@@ -42,6 +42,11 @@ interface ChallengeContextData {
   setFlavor: Dispatch<React.SetStateAction<any>>
   hasNetwork: boolean
   setHasNetwork: Dispatch<React.SetStateAction<boolean>>
+  price: number; // Adicione a propriedade price ao contexto
+  setPrice: Dispatch<React.SetStateAction<number>>; // Adicione o setter para a propriedade price
+  already: boolean; // Adicione a propriedade price ao contexto
+  setAlready: Dispatch<React.SetStateAction<boolean>>; // Adicione o setter para a propriedade price
+
 }
 
 interface DataStorageProps {
@@ -51,11 +56,16 @@ interface DataStorageProps {
 export const DataContext = createContext({} as ChallengeContextData)
 
 export const DataStorage = ({ children }: DataStorageProps) => {
+
   const [flavor, setFlavor] = useState([])
+
+  const [price, setPrice] = useState(0); 
+
+  const [already, setAlready] = useState(false); 
 
   const [additionals, setAdditionals] = useState<AdditionalProps[]>([])
 
-  const [size, setSize] = useState({ price: 0, size: '' })
+  const [size, setSize] = useState({  size: '' })
 
   const [cart, setCart] = useState(0)
 
@@ -78,8 +88,15 @@ export const DataStorage = ({ children }: DataStorageProps) => {
       value={{
         cart,
         setCart,
+        
         size,
         setSize,
+
+        price,
+        setPrice,
+
+        already,
+        setAlready,
 
         formData,
         setFormData,

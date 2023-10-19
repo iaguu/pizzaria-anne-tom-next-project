@@ -10,7 +10,7 @@ export const ContainerFluid = styled.div`
   width: 100%;
   flex-direction: column;
   top: 0;
-  height: 5rem;
+  height: 6rem;
 `
 
 export const Nav = styled.nav`
@@ -24,6 +24,8 @@ export const Nav = styled.nav`
 
 export const Logo = styled.span`
   display: flex;
+  
+  padding:10px;
 
   div {
     position: relative !important;

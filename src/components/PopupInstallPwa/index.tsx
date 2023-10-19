@@ -46,14 +46,14 @@ export const PopupInstallPwa = () => {
                 <S.Close />
               </span>
               <img
-                src="/icons/icon-72x72.png"
+                src="https://annetom.com/icons/icon-72x72.png"
                 width="50"
                 height="50"
-                alt="Pizzaria Toffanetto"
+                alt="Pizzaria Anne & Tom"
               />
               <img
-                src="/img/logo-popup-pwa.png"
-                alt="Pizzaria Toffanetto"
+                src="https://annetom.com/img/logo-popup-pwa.png"
+                alt="Pizzaria Anne & Tom"
                 width="240"
                 height="50"
               />

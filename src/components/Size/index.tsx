@@ -9,16 +9,43 @@ interface SizeProps {
   sizes: [
     {
       size: string
-      price: number
       slices: number
+      price: number
+    },
+    {
+      size: string
+      slices: number
+      price: number
     }
   ]
 }
 
 export const Size = ({ sizes }: SizeProps) => {
-  const { size, setSize, setCart } = useContext(DataContext)
 
+  const {already, setAlready, price, setPrice, size, setSize, setCart } = useContext(DataContext)
+  
+  
   useEffect(() => getStorage('size') && setSize(getStorage('size')), [setSize])
+
+  useEffect(() => getStorage('price') && setPrice(getStorage('price')), [setPrice])
+
+  useEffect(() => getStorage('cart') && setCart(getStorage('cart')), [setCart])
+
+  useEffect(() => {
+  
+    if(already === false){
+      setPrices();
+    }
+
+  })
+
+  const setPrices = () => {
+    sizes[1].price = price;
+    sizes[0].price = Math.round(price / 1.35);
+    setAlready(true)
+  }
+
+  const ConvertToPrice = (price: number) => useCart(price)
 
   const addCart = (price: number) => {
     setCart(price)
@@ -26,15 +53,25 @@ export const Size = ({ sizes }: SizeProps) => {
   }
 
   const handleSizeChecked = (price: number, currentSize: string) => {
-    const sizeAndPrice = { price: price, size: currentSize }
-    setSize(sizeAndPrice)
 
-    setStorage('size', sizeAndPrice)
 
-    addCart(price)
+    const sizeAndPrice = { price: price, size: currentSize };
+
+    setPrice(price); // Mantém o preço original imutável
+
+    setSize(sizeAndPrice);
+
+    setStorage('size', sizeAndPrice);
+
+    addCart(price);
+
   }
 
-  const ConvertToPrice = (price: number) => useCart(price)
+
+
+  
+
+
 
   return (
     <>
@@ -78,10 +115,10 @@ export const Size = ({ sizes }: SizeProps) => {
                       ({el.slices} Fatias)
                     </S.SubTitle>
                   </S.ContentInfo>
-                  <S.Title>{ConvertToPrice(el.price)}</S.Title>
+                  <S.Title>{ConvertToPrice(Math.round(el.price))}</S.Title>
                 </S.ContainerInfo>
               </S.RadioContent>
-            </S.ContainerRadio>
+            </S.ContainerRadio> 
           </S.Card>
         ))}
 

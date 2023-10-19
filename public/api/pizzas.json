@@ -7,6 +7,7 @@
         "img": "calabreza",
         "ingredients": "Mussarela, calabresa e cebola, orégano.",
         "recommendationDay": true,
+        "price": 39.99,
         "points": 300
       },
       {
@@ -15,6 +16,7 @@
         "img": "mussarela",
         "ingredients": "Queijo mussarela e orégano.",
         "recommendationDay": false,
+        "price": 29.99,
         "points": 360
       },
       {
@@ -23,6 +25,7 @@
         "img": "napolitana",
         "ingredients": "Mussarela, tomate, orégano e parmesão ralado.",
         "recommendationDay": false,
+        "price": 59.99,
         "points": 250
       },
       {
@@ -31,29 +34,21 @@
         "img": "peperone",
         "ingredients": "Mussarela, orégano e pepperoni.",
         "recommendationDay": false,
+        "price": 69.99,
         "points": 400
+        
       }
     ],
     "sizesAndPrices": [
       {
-        "size": "Pequena",
-        "price": 19.99,
-        "slices": 4
-      },
-      {
         "size": "Média",
-        "price": 29.99,
-        "slices": 6
+        "slices": 4,
+        "price": 0
       },
       {
         "size": "Grande",
-        "price": 39.99,
-        "slices": 8
-      },
-      {
-        "size": "Família",
-        "price": 49.99,
-        "slices": 12
+        "slices": 8,
+        "price": 0
       }
     ]
   }

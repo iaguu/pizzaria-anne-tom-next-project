@@ -1,5 +1,6 @@
 import * as S from 'components/CardsSquare/styles'
 import Link from 'next/link'
+import { useCart } from 'hooks/UseCart'
 
 interface CardSquareProps {
   data: [
@@ -10,9 +11,11 @@ interface CardSquareProps {
       name: string
       points: string
       recommendationDay: string
+      price: number
     }
   ]
 }
+const ConvertToPrice = (price: number) => useCart(price)
 
 const CardsSquare = ({ data }: CardSquareProps) => {
 
@@ -35,6 +38,8 @@ const CardsSquare = ({ data }: CardSquareProps) => {
               <S.ContentInfo>
                 <S.SubTitle>Ingredientes:</S.SubTitle>
                 <S.Text>{el.ingredients}</S.Text>
+                <br />
+                <S.Text>{ConvertToPrice(el.price)}</S.Text>
               </S.ContentInfo>
               <Link href="/etapa-1">
                 <a>

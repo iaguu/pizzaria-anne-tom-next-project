@@ -18,14 +18,14 @@ export const Cart = () => {
         <S.ContainerCart>
           {cart === 0 ? (
             <img
-              src="/img/icons/cart.svg"
+              src="https://annetom.com/img/icons/cart.svg"
               alt="Imagem de uma pizza"
               width="80"
               height="50"
             />
           ) : (
             <img
-              src="/img/icons/cart-full.svg"
+              src="https://annetom.com/img/icons/cart-full.svg"
               alt="Imagem de uma pizza"
               width="80"
               height="50"

@@ -7,6 +7,7 @@ import { readToken } from 'utils/HandleToken'
 const Etapa2 = ({
   dataApi
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  
   if (!readToken('tokenPageStep2') && typeof window !== 'undefined') {
     return (window.location.href = '/')
   }

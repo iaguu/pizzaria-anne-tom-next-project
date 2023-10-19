@@ -3,6 +3,7 @@ import { c } from 'theme'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import * as C from 'components'
 
+
 const Etapa1 = ({
   dataApi
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -11,6 +12,10 @@ const Etapa1 = ({
       <C.HeadPage title="Checkout 1/4" />
       <C.Steps activeStep={[true, false, false, false, false]} />
       <C.TitleSection title="Selecione o sabor da pizza" />
+      <c.Container>
+        <h3>(Marcar mais de um sabor para 1/2)</h3>
+      </c.Container>
+
       <C.Cart />
       <c.Container>
         <C.Flavor data={dataApi.pizzas} />
