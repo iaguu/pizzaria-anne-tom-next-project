@@ -66,6 +66,7 @@ export const FormData = () => {
   const [loadZipCode, setLoadZipCode] = useState(false)
   const [disabledField, setDisabledField] = useState(true)
 
+  
   const SearchCep = useCallback(async (params: string, server = 0) => {
     setLoadZipCode(true)
 

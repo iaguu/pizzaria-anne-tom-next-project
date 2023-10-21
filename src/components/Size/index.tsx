@@ -22,9 +22,9 @@ interface SizeProps {
 
 export const Size = ({ sizes }: SizeProps) => {
 
-  const {already, setAlready, price, setPrice, size, setSize, setCart } = useContext(DataContext)
+  const {already, setAlready, price, setPrice, size, setSize, cart, setCart } = useContext(DataContext)
   
-  
+ 
   useEffect(() => getStorage('size') && setSize(getStorage('size')), [setSize])
 
   useEffect(() => getStorage('price') && setPrice(getStorage('price')), [setPrice])
@@ -34,15 +34,36 @@ export const Size = ({ sizes }: SizeProps) => {
   useEffect(() => {
   
     if(already === false){
+      console.log("Está fechado:" + already);
       setPrices();
     }
 
   })
 
-  const setPrices = () => {
-    sizes[1].price = price;
-    sizes[0].price = Math.round(price / 1.35);
+  const setPrices = async () => { 
+    const preco = await getStorage('price')
+
+    
+    if (getStorage('additionals')) {
+      var tempadditionals = await getStorage('additionals');
+
+      for (let i = 0; i < tempadditionals.length; i++) {
+        tempadditionals[i] = 0;        
+      }
+
+      setStorage('additionals', tempadditionals)
+    }
+
+    sizes[1].price = preco;
+    sizes[0].price = Math.round(preco / 1.35);
+
     setAlready(true)
+    setPrice(preco);
+
+    console.log("Preço atual: R$" + price);
+    console.log("Carrinho atual: R$" + cart);
+    console.log("Está fechado:" + already);
+    
   }
 
   const ConvertToPrice = (price: number) => useCart(price)
@@ -68,20 +89,15 @@ export const Size = ({ sizes }: SizeProps) => {
   }
 
 
-
-  
-
-
-
   return (
     <>
       <S.TitleComponent>Tamanhos</S.TitleComponent>
       <S.ContainerSize>
-        {sizes.map(el => (
-          <S.Card key={el.size} verifyCheck={size.size === el.size}>
+
+      <S.Card key={sizes[1].size} verifyCheck={size.size === sizes[1].size}>
             <S.ContainerRadio>
               <S.RadioContent>
-                <S.RadioLabel verifyCheck={size.size === el.size}>
+                <S.RadioLabel verifyCheck={size.size === sizes[1].size}>
                   <img
                     src="https://annetom.com/img/icons/radio.svg"
                     width="18"
@@ -96,14 +112,14 @@ export const Size = ({ sizes }: SizeProps) => {
                   />
                   <input
                     type="radio"
-                    checked={size.size === el.size}
-                    onChange={() => handleSizeChecked(el.price, el.size)}
-                    value={el.size}
-                    name={el.size}
+                    checked={size.size === sizes[1].size}
+                    onChange={() => handleSizeChecked(sizes[1].price, sizes[1].size)}
+                    value={sizes[1].size}
+                    name={sizes[1].size}
                   />
                 </S.RadioLabel>
                 <S.ContainerInfo>
-                  <S.Title>Pizza {el.size}</S.Title>
+                  <S.Title>Pizza {sizes[1].size}</S.Title>
                   <S.ContentInfo>
                     <S.SubTitle>
                       <img
@@ -112,15 +128,57 @@ export const Size = ({ sizes }: SizeProps) => {
                         width="24"
                         height="25"
                       />
-                      ({el.slices} Fatias)
+                      ({sizes[1].slices} Fatias)
                     </S.SubTitle>
                   </S.ContentInfo>
-                  <S.Title>{ConvertToPrice(Math.round(el.price))}</S.Title>
+                  <S.Title>{ConvertToPrice(Math.round(sizes[1].price))}</S.Title>
                 </S.ContainerInfo>
               </S.RadioContent>
             </S.ContainerRadio> 
           </S.Card>
-        ))}
+
+          <S.Card key={sizes[0].size} verifyCheck={size.size === sizes[0].size}>
+            <S.ContainerRadio>
+              <S.RadioContent>
+                <S.RadioLabel verifyCheck={size.size === sizes[0].size}>
+                  <img
+                    src="https://annetom.com/img/icons/radio.svg"
+                    width="18"
+                    height="18"
+                    alt="Checkbox"
+                  />
+                  <img
+                    src="https://annetom.com/img/icons/radio-checked.svg"
+                    width="18"
+                    height="18"
+                    alt="Checkbox"
+                  />
+                  <input
+                    type="radio"
+                    checked={size.size === sizes[0].size}
+                    onChange={() => handleSizeChecked(sizes[0].price, sizes[0].size)}
+                    value={sizes[0].size}
+                    name={sizes[0].size}
+                  />
+                </S.RadioLabel>
+                <S.ContainerInfo>
+                  <S.Title>Pizza {sizes[0].size}</S.Title>
+                  <S.ContentInfo>
+                    <S.SubTitle>
+                      <img
+                        src="https://annetom.com/img/icons/slice-pizza.svg"
+                        alt="Imagem de uma pizza"
+                        width="24"
+                        height="25"
+                      />
+                      ({sizes[0].slices} Fatias)
+                    </S.SubTitle>
+                  </S.ContentInfo>
+                  <S.Title>{ConvertToPrice(Math.round(sizes[0].price))}</S.Title>
+                </S.ContainerInfo>
+              </S.RadioContent>
+            </S.ContainerRadio> 
+          </S.Card>
 
         <S.WrapperBtn>
           <C.BtnNext text="Voltar" route={'/etapa-1'} />

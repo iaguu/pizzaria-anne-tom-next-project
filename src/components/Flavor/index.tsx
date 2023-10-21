@@ -6,15 +6,17 @@ import { getStorage, setStorage } from 'utils/HandleSessionStorage';
 import { useCart } from 'hooks/UseCart';
 
 interface FlavorProps {
-  data: {
-    id: string;
-    img: string;
-    ingredients: string;
-    name: string;
-    points: number;
-    recommendationDay: boolean;
-    price: number;
-  }[];
+  data: [
+    {
+      id: string;
+      img: string;
+      ingredients: string;
+      name: string;
+      points: number;
+      price: number;
+      recommendationDay: boolean;
+    }
+  ];
 }
 
 export const Flavor = ({ data }: FlavorProps) => {
@@ -24,58 +26,37 @@ export const Flavor = ({ data }: FlavorProps) => {
 
   const ConvertToPrice = (price: number) => useCart(price)
 
-  useEffect(() => {
-    
-    const savedFlavor = getStorage('flavor');
-    const savedPrice = getStorage('price');
-    const savedCart = getStorage('cart');
 
+  // verifica se existe algum valor no sessionStorage, se true, grava no state flavor
+  useEffect(
+    () => getStorage('flavor') && setFlavor(getStorage('flavor')),
+    [setFlavor]
+  )
 
-    if (savedFlavor) {
-      setFlavor(savedFlavor);
-    }
-
-    if (savedPrice !== null) {
-      setPrice(parseFloat(savedPrice));
-    }else{
-      setPrice(0)
-    }
-
-    if (savedCart) {
-      setFlavor(savedCart);
-    }
-
-  }, [setFlavor, setPrice, setCart]);
-
-
+  // toda vez que alterar o state flavor grava seu valor no sessionStorage
+  useEffect(() => setStorage('flavor', flavor), [flavor])
+  useEffect(() => setStorage('price', price), [price])
 
   const addCart = (price: number) => {
 
-    setStorage('cart', price)
-
+    console.log(cart);
+    console.log(price);
+    console.log(flavor);
+    
     setCart(price)
+
+    setPrice(price)
+
+    
   }
 
   const changePrice = (price: number) => {
-  
     setPrice(price || 0)
     addCart(price || 0)
-
-
   }
 
-  const debug = () =>{
-    console.log("====== DEBUG ======");
-
-    console.log("Preço salvo no estado: R$" + price);
-    console.log("Carrinho salvo no estado: R$" + cart);
-    console.log("Sabores salvo no estado: " + flavor);
-
-    console.log("====== DEBUG ======");
-  }
 
   const apply = (has: boolean, price: number) => {
-    debug()
 
     var total = 0 + price;
 
@@ -88,17 +69,24 @@ export const Flavor = ({ data }: FlavorProps) => {
     }
 
     changePrice(total)
-
-    debug()
+    addCart(total)
 
   }
 
-  const changeFlavorChecked = (id: string, price: number) => {
+  const getFlavorById = (id: string, data: [{ id: string }]) => {
+    return data.find(el => el.id === id)
+  }
 
-    const currentFlavorClicked = data.find(el => el.id === id);
+
+  const changeFlavorChecked = (id: string, price: number) => {
+    
+    setPrice(0)
+
+    const currentFlavorClicked = getFlavorById(id, data)
 
 
     if (currentFlavorClicked) {
+
 
       const verifyItemInFlavorClicked = flavor.find((el:{id:string}) => el.id === id);
       
@@ -109,10 +97,10 @@ export const Flavor = ({ data }: FlavorProps) => {
           if (verifyItemInFlavorClicked) {
 
             setFlavor(flavor.filter((el:{id:string}) => el.id !== id));
+
             hasProduct = false;
 
             if(flavor[0] === undefined || flavor[0] === null || flavor.lenght === 0){
-              console.log("!!! - Valor nulo no verifyItemFlavor - !!!");
               setPrice(0);
             }else{
               apply(hasProduct, price)
@@ -123,6 +111,7 @@ export const Flavor = ({ data }: FlavorProps) => {
             if (flavor.length < 2) {
 
               setFlavor([...flavor, currentFlavorClicked]);
+
               hasProduct = true;
               apply(hasProduct, price)
 
