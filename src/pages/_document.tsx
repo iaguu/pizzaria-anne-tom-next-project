@@ -43,14 +43,14 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#7f1d1d" />
           <link rel="manifest" href="/manifest.json" />
           {/* open graph */}
-          <meta property="og:site_name" content="Pizzaria Anne & Tom" />
+          <meta property="og:site_name" content="Pizzaria Anne & Tom - Pizza 5 Estrelas." />
           <meta property="og:locale" content="pt_BR" />
           <meta
             property="og:url"
             content="https://annetom.com"
           />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Pizzaria Toffanetto" />
+          <meta property="og:title" content="Pizzaria Anne & Tom - Pizza 5 Estrelas." />
           <meta
             property="og:description"
             content="Anne & Tom: Pizza Premium, Servida com Paixão."

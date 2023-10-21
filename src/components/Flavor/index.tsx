@@ -18,7 +18,7 @@ interface FlavorProps {
     }
   ];
 }
-
+ 
 export const Flavor = ({ data }: FlavorProps) => {
 
   
