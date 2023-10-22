@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="keywords"
-            content="pizzaria, delivery, everton, everton toffanetto, next, nextjs, react"
+            content="pizzaria, delivery, 5 estrelas, pizza premium, pizza nobre, pizzas 5 estrelas, pizzarias próximas, pizzarias proximas de mim"
           />
           <meta name="author" content="Éverton Toffanetto" />
           <meta name="copyright" content="© Éverton Toffanetto" />
