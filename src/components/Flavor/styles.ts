@@ -62,6 +62,86 @@ export const Card = styled.label<{ verifyCheck: boolean }>`
     animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
     animation-delay: 700ms;
   }
+  &:nth-child(5) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 900ms;
+  }
+  &:nth-child(6) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 1200ms;
+  }
+  &:nth-child(7) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 1400ms;
+  }
+  &:nth-child(8) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 1600ms;
+  }
+  &:nth-child(9) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(10) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(11) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(12) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(13) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(14) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(15) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(16) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(17) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(18) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(19) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(20) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(21) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(22) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(23) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
+  &:nth-child(24) {
+    animation: ${s.zoom} 0.4s ease-in-out, ${s.fadeIn} 0.1s linear forwards;
+    animation-delay: 700ms;
+  }
 
   &:hover {
     border: 0.2rem solid ${s.secondary};

@@ -4,17 +4,6 @@ export const Footer = () => {
   return (
     <>
       <S.Footer>
-        <S.ContainerFooter>
-        Desenvolvido por
-          <a
-            href="https://querocriarsite.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <em>Éverton Toffanetto</em>
-          </a>
-        </S.ContainerFooter>
-        <br></br>
         <br></br>
         <S.ContainerFooter>
         Powered by

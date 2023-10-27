@@ -13,7 +13,7 @@ const Etapa1 = ({
       <C.Steps activeStep={[true, false, false, false, false]} />
       <C.TitleSection title="Selecione o sabor da pizza" />
       <c.Container>
-        <h3>(Marcar mais de um sabor para 1/2)</h3>
+        <h3>(* Marcar mais de um sabor para 1/2)</h3>
       </c.Container>
 
       <C.Cart />

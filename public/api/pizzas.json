@@ -2,54 +2,234 @@
   {
     "pizzas": [
       {
-        "id": "calabreza",
-        "name": "Calabreza",
-        "img": "calabreza",
-        "ingredients": "Mussarela, calabresa e cebola, orégano.",
-        "recommendationDay": true,
-        "price": 39.99,
-        "points": 300
+        "id": "anne-tom",
+        "name": "Anne & Tom",
+        "img": "padrao",
+        "ingredients": "Provolone, cream cheese e pesto de manjericão",
+        "recommendationDay": false,
+        "price": 62.80,
+        "points": 260
       },
       {
-        "id": "mussarela",
-        "name": "Mussarela",
-        "img": "mussarela",
-        "ingredients": "Queijo mussarela e orégano.",
+        "id": "vilarejo",
+        "name": "Vilarejo",
+        "img": "vilarejo",
+        "ingredients": "Gorgonzola, catupiry, queijo branco, champignon, molho em pedaços e pesto de manjericão",
         "recommendationDay": false,
-        "price": 29.99,
+        "price": 68.00,
+        "points": 475
+      },
+      {
+        "id": "saci",
+        "name": "Saci",
+        "img": "saci",
+        "ingredients": "Frango, queijo minas, brócolis no alho, mussarela e tomate",
+        "recommendationDay": false,
+        "price": 59.60,
+        "points": 390
+      },
+      {
+        "id": "emilia",
+        "name": "Emília",
+        "img": "emilia",
+        "ingredients": "Frango, cheddar, catupiry, tomate cereja",
+        "recommendationDay": false,
+        "price": 59.00,
+        "points": 335
+      },
+      {
+        "id": "tia-nastacia",
+        "name": "Tia Nastácia",
+        "img": "tia-nastacia",
+        "ingredients": "Peito de peru, catupiry, provolone e escarola",
+        "recommendationDay": false,
+        "price": 62.00,
+        "points": 420
+      },
+      {
+        "id": "tio-barnabe",
+        "name": "Tio Barnabé",
+        "img": "tio-barnabe",
+        "ingredients": "Peru, catupiry, cramberry e hortelã",
+        "recommendationDay": false,
+        "price": 60.00,
+        "points": 375
+      },
+      {
+        "id": "narizinho",
+        "name": "Narizinho",
+        "img": "padrao",
+        "ingredients": "Queijo branco, presunto, palmito, catupiry e parmesão",
+        "recommendationDay": false,
+        "price": 62.00,
+        "points": 430
+      },
+      {
+        "id": "monte-formoso",
+        "name": "Monte Formoso",
+        "img": "monte-formoso",
+        "ingredients": "Lombo, mussarela, palmito, parmesão e alho",
+        "recommendationDay": false,
+        "price": 64.00,
+        "points": 375
+      },
+      {
+        "id": "mirante",
+        "name": "Mirante",
+        "img": "mirante",
+        "ingredients": "Pepperoni, mussarela e tomate",
+        "recommendationDay": false,
+        "price": 60.00,
+        "points": 285
+      },
+      {
+        "id": "guimaraes",
+        "name": "Guimarães",
+        "img": "guimaraes",
+        "ingredients": "Presunto, catupiry, champignon e alcaparras",
+        "recommendationDay": false,
+        "price": 60.00,
+        "points": 295
+      },
+      {
+        "id": "juazeiro",
+        "name": "Juazeiro",
+        "img": "juazeiro",
+        "ingredients": "Carne seca, catupiry, cebola e pimentão",
+        "recommendationDay": false,
+        "price": 72.80,
         "points": 360
       },
       {
-        "id": "napolitana",
-        "name": "Napolitana",
-        "img": "napolitana",
-        "ingredients": "Mussarela, tomate, orégano e parmesão ralado.",
+        "id": "pedra-gavea",
+        "name": "Pedra da Gávea",
+        "img": "pedra-gavea",
+        "ingredients": "Presunto, calabresa, salame, mussarela de búfala, tomate e manjericão",
         "recommendationDay": false,
-        "price": 59.99,
-        "points": 250
+        "price": 68.00,
+        "points": 440
       },
       {
-        "id": "peperone",
-        "name": "peperone",
-        "img": "peperone",
-        "ingredients": "Mussarela, orégano e pepperoni.",
+        "id": "monte-roraima",
+        "name": "Monte Roraima",
+        "img": "monte-roraima",
+        "ingredients": "Picanha, gorgonzola, cream cheese, alho poró, tomate cereja",
         "recommendationDay": false,
-        "price": 69.99,
-        "points": 400
-        
+        "price": 84.00,
+        "points": 380
+      },
+      {
+        "id": "arraial-ajuda",
+        "name": "Arraial D'ajuda",
+        "img": "arraial-ajuda",
+        "ingredients": "Carne seca, palmito, tomate, cebola, mussarela e catupiry",
+        "recommendationDay": false,
+        "price": 76.50,
+        "points": 440
+      },
+      {
+        "id": "xavante",
+        "name": "Xavante",
+        "img": "xavante",
+        "ingredients": "Abobrinha, mussarela, gorgonzola e orégano",
+        "recommendationDay": false,
+        "price": 60.00,
+        "points": 325
+      },
+      {
+        "id": "xingu",
+        "name": "Xingu",
+        "img": "xingu",
+        "ingredients": "Brócolis, bacon, catupiry e alho poró",
+        "recommendationDay": false,
+        "price": 60.00,
+        "points": 290
+      },
+      {
+        "id": "itaunas",
+        "name": "Itaúnas",
+        "img": "itaunas",
+        "ingredients": "Palmito, catupiry, gorgonzola e tomate cereja",
+        "recommendationDay": false,
+        "price": 70.00,
+        "points": 440
+      },
+      {
+        "id": "monte-verde",
+        "name": "Monte Verde",
+        "img": "monte-verde",
+        "ingredients": "Palmito, lombo, queijo prato, brócolis e parmesão",
+        "recommendationDay": false,
+        "price": 65.90,
+        "points": 375
+      },
+      {
+        "id": "salvador",
+        "name": "Salvador",
+        "img": "padrao",
+        "ingredients": "Abóbora cabotiá, carne seca, cebola, salsinha e catupiry",
+        "recommendationDay": false,
+        "price": 70.00,
+        "points": 430
+      },
+      {
+        "id": "pauba",
+        "name": "Paúba",
+        "img": "pauba",
+        "ingredients": "Atum, catupiry e tomate",
+        "recommendationDay": false,
+        "price": 66.00,
+        "points": 300
+      },
+      {
+        "id": "jericoacoara",
+        "name": "Jericoacoara",
+        "img": "padrao",
+        "ingredients": "Atum, escarola, mussarela e tomate",
+        "recommendationDay": false,
+        "price": 62.00,
+        "points": 315
+      },
+      {
+        "id": "iporanga",
+        "name": "Iporanga",
+        "img": "padrao",
+        "ingredients": "Atum, palmito, mussarela, gorgonzola e champignon",
+        "recommendationDay": false,
+        "price": 68.00,
+        "points": 450
+      },
+      {
+        "id": "santorini",
+        "name": "Santorini",
+        "img": "santorini",
+        "ingredients": "Camarão, alho poró, catupiry, alho torrado e parmesão",
+        "recommendationDay": true,
+        "price": 88.00,
+        "points": 490
+      },
+      {
+        "id": "indiana",
+        "name": "Indiana",
+        "img": "padrao",
+        "ingredients": "Frango ao Curry, gengibre, molho de tomate com hortelã, espinafre refogado e mussarela de búfala.",
+        "recommendationDay": false,
+        "price": 80.00,
+        "points": 295
       }
     ],
     "sizesAndPrices": [
       {
         "size": "Média",
-        "slices": 4,
-        "price": 0
+        "price": 0,
+        "slices": 4
       },
       {
         "size": "Grande",
-        "slices": 8,
-        "price": 0
+        "price": 0,
+        "slices": 8
       }
     ]
   }
+  
 ]
