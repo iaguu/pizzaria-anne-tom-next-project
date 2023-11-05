@@ -2,13 +2,13 @@
   {
     "pizzas": [
       {
-        "id": "anne-tom",
-        "name": "Anne & Tom",
-        "img": "padrao",
-        "ingredients": "Provolone, cream cheese e pesto de manjericão",
-        "recommendationDay": false,
-        "price": 62.80,
-        "points": 260
+        "id": "santorini",
+        "name": "Santorini",
+        "img": "santorini",
+        "ingredients": "Camarão, alho poró, catupiry, alho torrado e parmesão",
+        "recommendationDay": true,
+        "price": 88.00,
+        "points": 490
       },
       {
         "id": "vilarejo",
@@ -24,7 +24,7 @@
         "name": "Saci",
         "img": "saci",
         "ingredients": "Frango, queijo minas, brócolis no alho, mussarela e tomate",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 59.60,
         "points": 390
       },
@@ -33,7 +33,7 @@
         "name": "Emília",
         "img": "emilia",
         "ingredients": "Frango, cheddar, catupiry, tomate cereja",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 59.00,
         "points": 335
       },
@@ -51,7 +51,7 @@
         "name": "Tio Barnabé",
         "img": "tio-barnabe",
         "ingredients": "Peru, catupiry, cramberry e hortelã",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 60.00,
         "points": 375
       },
@@ -63,6 +63,15 @@
         "recommendationDay": false,
         "price": 62.00,
         "points": 430
+      },
+      {
+        "id": "anne-tom",
+        "name": "Anne & Tom",
+        "img": "padrao",
+        "ingredients": "Provolone, cream cheese e pesto de manjericão",
+        "recommendationDay": false,
+        "price": 62.80,
+        "points": 260
       },
       {
         "id": "monte-formoso",
@@ -87,7 +96,7 @@
         "name": "Guimarães",
         "img": "guimaraes",
         "ingredients": "Presunto, catupiry, champignon e alcaparras",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 60.00,
         "points": 295
       },
@@ -141,7 +150,7 @@
         "name": "Xingu",
         "img": "xingu",
         "ingredients": "Brócolis, bacon, catupiry e alho poró",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 60.00,
         "points": 290
       },
@@ -150,7 +159,7 @@
         "name": "Itaúnas",
         "img": "itaunas",
         "ingredients": "Palmito, catupiry, gorgonzola e tomate cereja",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 70.00,
         "points": 440
       },
@@ -159,7 +168,7 @@
         "name": "Monte Verde",
         "img": "monte-verde",
         "ingredients": "Palmito, lombo, queijo prato, brócolis e parmesão",
-        "recommendationDay": false,
+        "recommendationDay": true,
         "price": 65.90,
         "points": 375
       },
@@ -198,15 +207,6 @@
         "recommendationDay": false,
         "price": 68.00,
         "points": 450
-      },
-      {
-        "id": "santorini",
-        "name": "Santorini",
-        "img": "santorini",
-        "ingredients": "Camarão, alho poró, catupiry, alho torrado e parmesão",
-        "recommendationDay": true,
-        "price": 88.00,
-        "points": 490
       },
       {
         "id": "indiana",

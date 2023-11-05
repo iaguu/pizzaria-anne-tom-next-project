@@ -184,10 +184,10 @@ export const Size = ({ sizes }: SizeProps) => {
           <C.BtnNext text="Voltar" route={'/etapa-1'} />
           <S.Space />
           <C.BtnNext
-            route={'/etapa-3'}
+            route={'/etapa-4'}
             disabled={!size.size}
             token={{
-              name: 'tokenPageStep3',
+              name: 'tokenPageStep4',
               value: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ1'
             }}
           />

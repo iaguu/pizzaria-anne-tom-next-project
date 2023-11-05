@@ -15,6 +15,7 @@ interface FlavorProps {
       points: number;
       price: number;
       recommendationDay: boolean;
+      checked: boolean
     }
   ];
 }
@@ -22,56 +23,18 @@ interface FlavorProps {
 export const Flavor = ({ data }: FlavorProps) => {
 
   
-  const { flavor, setFlavor, price, setPrice, cart, setCart } = useContext(DataContext);
+  const { flavor, setFlavor, price, setPrice, setCart } = useContext(DataContext);
 
   const ConvertToPrice = (price: number) => useCart(price)
 
+  useEffect(() => getStorage('flavor') && setFlavor(getStorage('flavor')),[setFlavor])
 
-  // verifica se existe algum valor no sessionStorage, se true, grava no state flavor
-  useEffect(
-    () => getStorage('flavor') && setFlavor(getStorage('flavor')),
-    [setFlavor]
-  )
-
-  // toda vez que alterar o state flavor grava seu valor no sessionStorage
   useEffect(() => setStorage('flavor', flavor), [flavor])
   useEffect(() => setStorage('price', price), [price])
 
-  const addCart = (price: number) => {
-
-    console.log(cart);
-    console.log(price);
-    console.log(flavor);
-    
-    setCart(price)
-
-    setPrice(price)
-
-    
-  }
-
-  const changePrice = (price: number) => {
-    setPrice(price || 0)
-    addCart(price || 0)
-  }
 
 
-  const apply = (has: boolean, price: number) => {
 
-    var total = 0 + price;
-
-    if(has === true){
-      const existingFlavor = flavor[0];
-      const maxPrice = Math.max(existingFlavor?.price || 0, price);
-      total = maxPrice
-    }else{
-      total = flavor[0].price
-    }
-
-    changePrice(total)
-    addCart(total)
-
-  }
 
   const getFlavorById = (id: string, data: [{ id: string }]) => {
     return data.find(el => el.id === id)
@@ -79,56 +42,52 @@ export const Flavor = ({ data }: FlavorProps) => {
 
 
   const changeFlavorChecked = (id: string, price: number) => {
-    
-    setPrice(0)
-
-    const currentFlavorClicked = getFlavorById(id, data)
-
-
-    if (currentFlavorClicked) {
-
-
-      const verifyItemInFlavorClicked = flavor.find((el:{id:string}) => el.id === id);
-      
-
-      var hasProduct = false;
-
-
-          if (verifyItemInFlavorClicked) {
-
-            setFlavor(flavor.filter((el:{id:string}) => el.id !== id));
-
-            hasProduct = false;
-
-            if(flavor[0] === undefined || flavor[0] === null || flavor.lenght === 0){
-              setPrice(0);
-            }else{
-              apply(hasProduct, price)
-            }
-
-          }else{
-            
-            if (flavor.length < 2) {
-
-              setFlavor([...flavor, currentFlavorClicked]);
-
-              hasProduct = true;
-              apply(hasProduct, price)
-
-
-            }else{
-              alert('Limite de sabores atingido. Não é possível adicionar mais sabores.');
-            }
-          }
-
-
+    const currentFlavorClicked = getFlavorById(id, data);
+    const existingFlavor = [...flavor];
+  
+    if (existingFlavor.length === 2) {
+      if (existingFlavor.includes(currentFlavorClicked)) {
+        const remainingFlavors = existingFlavor.filter(flavor => flavor !== currentFlavorClicked);
+        setFlavor(remainingFlavors);
+  
+        if (remainingFlavors.length === 1) {
+          setPrice(remainingFlavors[0].price);
+          setCart(remainingFlavors[0].price);
+        } else {
+          setPrice(0);
+          setCart(0);
+        }
+      } else {
+        alert("Limite de sabores atingido, escolha apenas 2 sabores para pizza 1/2");
       }
-
-      
-
+    } else {
+      const flavorExists = existingFlavor.find(flavor => flavor === currentFlavorClicked);
+  
+      if (flavorExists) {
+        const updatedFlavors = existingFlavor.filter(flavor => flavor !== currentFlavorClicked);
+        setFlavor(updatedFlavors);
+  
+        if (updatedFlavors.length === 1) {
+          setPrice(updatedFlavors[0].price);
+          setCart(updatedFlavors[0].price);
+        } else {
+          setPrice(0);
+          setCart(0);
+        }
+      } else {
+        if (existingFlavor.length === 1) {
+          const maxPrice = Math.max(existingFlavor[0].price, price);
+          setPrice(maxPrice);
+          setCart(maxPrice);
+          setFlavor([...existingFlavor, currentFlavorClicked]);
+        } else {
+          setPrice(price);
+          setCart(price);
+          setFlavor([...existingFlavor, currentFlavorClicked]);
+        }
+      }
     }
-
-    
+  };
   
 
   return (
